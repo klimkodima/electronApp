@@ -1,0 +1,54 @@
+.loading {
+  background-color: #ffffff;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-center {
+  height: 100px;
+  width: 300px;
+  -webkit-animation: animate 3s infinite ease-in-out;
+  animation: animate 3s infinite ease-in-out;
+}
+
+.loading-center img {
+  width: 100%;
+  height: 100%;
+}
+
+@-webkit-keyframes animate {
+  0% {
+      -webkit-transform: scale(1);
+  }
+
+  50% {
+      -webkit-transform: scale(2);
+  }
+
+  100% {
+      -webkit-transform: scale(1);
+  }
+}
+
+@keyframes animate {
+  0% {
+      transform: scale(1);
+      -webkit-transform: scale(1);
+      -webkit-animation-duration: 5s;
+  }
+
+  50% {
+      transform: scale(2);
+      -webkit-transform: scale(2);
+      -webkit-animation-duration: 5s;
+  }
+
+  100% {
+      transform: scale(1);
+      -webkit-transform: scale(1);
+      -webkit-animation-duration: 5s;
+  }
+}
+
