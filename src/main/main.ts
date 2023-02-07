@@ -1,5 +1,13 @@
 import path from 'path';
-import { app, screen, BrowserWindow, shell, ipcMain } from 'electron';
+import {
+  app,
+  screen,
+  BrowserWindow,
+  shell,
+  ipcMain,
+  Menu,
+  Tray,
+} from 'electron';
 import { autoUpdater } from 'electron-updater';
 import log from 'electron-log';
 import MenuBuilder from './menu';
@@ -70,7 +78,7 @@ const createWindow = async () => {
     minHeight: 200,
     maxWidth: width,
     maxHeight: height,
-    titleBarStyle: 'hidden',
+    titleBarStyle: 'default',
     titleBarOverlay: false,
     backgroundColor: 'fff',
     icon: getAssetPath('icon.png'),
@@ -115,6 +123,21 @@ const createWindow = async () => {
 /**
  * Add event listeners...
  */
+
+app.on('ready', () => {
+  const tray = new Tray('assets/icon.ico');
+  const contextMenu = Menu.buildFromTemplate([
+    {
+      label: 'Show meeting room reservation app',
+      click: () =>
+        mainWindow?.isVisible() ? mainWindow.hide() : mainWindow?.show(),
+    },
+    { role: 'quit' },
+  ]);
+  tray.setToolTip('Meeting room reservation');
+  tray.setContextMenu(contextMenu);
+  tray.on('click', () => mainWindow?.show());
+});
 
 app.on('window-all-closed', () => {
   // Respect the OSX convention of having the application in memory even

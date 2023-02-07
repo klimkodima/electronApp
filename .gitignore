@@ -31,3 +31,6 @@ npm-debug.log.*
 .erb
 .vscode
 realise
+defaultmenu.ts
+
+src/renderer/components/home
