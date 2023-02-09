@@ -32,5 +32,3 @@ npm-debug.log.*
 .vscode
 realise
 defaultmenu.ts
-
-src/renderer/components/home

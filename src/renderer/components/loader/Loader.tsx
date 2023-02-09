@@ -1,5 +1,5 @@
 import { ReactElement } from 'react';
-import logo from '../../../../assets/icons/avectis/Logo_blue_Avectis.svg';
+import logo from '../../../../assets/icons/avectis/logo_blue_Avectis.svg';
 import './Loader.css';
 
 function Loader(): ReactElement {
