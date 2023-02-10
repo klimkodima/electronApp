@@ -69,6 +69,7 @@ const createWindow = async () => {
   const getAssetPath = (...paths: string[]): string => {
     return path.join(RESOURCES_PATH, ...paths);
   };
+
   const { width, height } = screen.getPrimaryDisplay().workAreaSize;
   mainWindow = new BrowserWindow({
     show: false,
@@ -128,13 +129,13 @@ app.on('ready', () => {
   const tray = new Tray('assets/icon.ico');
   const contextMenu = Menu.buildFromTemplate([
     {
-      label: 'Show meeting room reservation app',
+      label: 'Show meeting room booking app',
       click: () =>
         mainWindow?.isVisible() ? mainWindow.hide() : mainWindow?.show(),
     },
     { role: 'quit' },
   ]);
-  tray.setToolTip('Meeting room reservation');
+  tray.setToolTip('Meeting room booking');
   tray.setContextMenu(contextMenu);
   tray.on('click', () => mainWindow?.show());
 });
@@ -149,7 +150,6 @@ app.on('window-all-closed', () => {
 
 app
   .whenReady()
-  // eslint-disable-next-line promise/always-return
   .then(() => {
     createWindow();
     app.on('activate', () => {

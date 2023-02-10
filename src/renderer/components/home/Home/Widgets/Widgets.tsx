@@ -1,12 +1,11 @@
 import { useEffect, useState, ReactElement } from 'react';
-import {Helmet} from "react-helmet";
 import { formatDate } from './helper';
 import AnalogClock from './Clock';
 import useScript from '../../../../hooks/useScript';
-import './RightSide.css';
+import './Widgets.css';
 import logo from '../../../../../../assets/icons/avectis/logo-AVECTIS5.svg';
 
-function RightSide(): ReactElement {
+function Widgets(): ReactElement {
   const [date, setDate] = useState(new Date());
   useScript('https://static1.meteolabs.ru/widgetjs/?id=id4bf8fb25f60c9');
 
@@ -40,4 +39,4 @@ function RightSide(): ReactElement {
   );
 }
 
-export default RightSide;
+export default Widgets;

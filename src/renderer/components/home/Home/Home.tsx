@@ -1,7 +1,7 @@
 import { ReactElement } from 'react';
 import { Footer } from './Footer';
 import { LeftSide } from './LeftSide';
-import { RightSide } from './RightSide';
+import { Widgets } from './Widgets';
 import './Home.css';
 
 function Home(): ReactElement {
@@ -10,7 +10,7 @@ function Home(): ReactElement {
       <div id="svg" className="svg" />
       <div className="main">
         <LeftSide />
-        <RightSide />
+        <Widgets />
       </div>
       <Footer />
     </div>
