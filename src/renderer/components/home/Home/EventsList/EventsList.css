@@ -1,0 +1,55 @@
+.events-list {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.status {
+  width: 35px;
+}
+
+.free {
+  background-color: green;
+}
+
+.busy {
+  background-color: red;
+}
+
+.events {
+  flex: 11;
+  display: flex;
+  flex-direction: row;
+  margin-left: 10px;
+}
+
+.current-event {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.summary {
+  height: 75px;
+  color: rgb(25, 120, 228);
+  font-size: 4vw;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 60px;
+  padding-left: 25px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+.future-event {
+  height: 70px;
+  color: rgb(25, 120, 228);
+  font-size: 2.5vw;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: auto;
+  opacity: 1;
+  margin-top: 20px;
+}

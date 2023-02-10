@@ -18,7 +18,7 @@ function Widgets(): ReactElement {
   }, []);
 
   return (
-    <div className="right-side">
+    <div className="widgets">
       <div className="logo">
         <img src={logo} alt="professional logo" />
       </div>

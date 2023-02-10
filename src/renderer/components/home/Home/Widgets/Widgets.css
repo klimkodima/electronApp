@@ -1,13 +1,13 @@
-.right-side {
+.widgets {
   flex: 1;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .logo {
   width: 100%;
   height: 50px;
-  text-align: right;
   margin: 20px auto;
 }
 
@@ -28,9 +28,9 @@ hr {
 .current-date {
   width: 75%;
   height: 200px;
-  background-color: rgb(92, 167,220);
-  margin: 0 12.5%;
+  background-color: rgb(25, 120, 228);
   margin-bottom: 20px;
+  padding-top: 15px;
 }
 
 .clock-container {
@@ -66,11 +66,11 @@ hr {
 }
 
 .weather-container {
-  width: 75%;
-  margin: 5px 12.5%;
+  display: flex;
+  justify-content: center;
+  margin: 5px;
 }
 
 #id4bf8fb25f60c9 {
-  width: 75%;
-  margin: 5px 12.5%;
+  width: 100%;
 }

@@ -2,10 +2,23 @@
   width: 100vw;
   height: 100vh;
   background-image: url("../../../../../assets/icons/background.png");
+  z-index: 1;
 }
 
 .main {
   width: 100vw;
   height: calc(100vh - 75px);
   display: flex;
+}
+
+.svg {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../../../../../assets/icons/background1.svg");
+  background-size: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  opacity: .8;
+  z-index: 10;
 }
