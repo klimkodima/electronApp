@@ -1,12 +1,13 @@
 import { ReactElement } from 'react';
 import { EventInfo } from './EventInfo';
+import { TimeLine } from './Timeline';
 import './EventsList.css';
 
 function EventsList(): ReactElement {
   const meetingEvent = {
     noEvent: 1,
-    start: '10.30',
-    end: '11.30',
+    start: '2023-02-11 19:30',
+    end: '2023-02-11 21:30',
     theme: 'Встреча с заказчиком',
     organizer: 'klimko dmitry',
     remain: '20 минут',
@@ -32,7 +33,7 @@ function EventsList(): ReactElement {
           {!!noEvent && <EventInfo eventInfo={eventInfo} />}
         </div>
       </div>
-      {!!noEvent && <div className="future-event">{futureEvents}</div>}
+      <TimeLine eventInfo={eventInfo} />
     </div>
   );
 }

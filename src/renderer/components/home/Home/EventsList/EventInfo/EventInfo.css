@@ -48,7 +48,23 @@
   justify-content: space-between;
 }
 
+.first {
+  flex: 1;
+  height: 75px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .remaining-label {
+  height: 65px;
+  font-size: 2vw;
+  color: rgba(34, 34, 34, 0.85);
+  font-family: Arial, Helvetica, sans-serif;
+  /* background-color: blue; */
+}
+
+.first-label {
   height: 65px;
   font-size: 2vw;
   color: rgba(34, 34, 34, 0.85);
@@ -60,6 +76,13 @@
   height: 65px;
   font-size: 2vw;
   color: rgba(34, 34, 34, 0.85);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.first-info{
+  height: 65px;
+  font-size: 2vw;
+  color: red;
   font-family: Arial, Helvetica, sans-serif;
 }
 
