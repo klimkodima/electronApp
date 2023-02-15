@@ -7,12 +7,3 @@ html {
   touch-action: none;
   overflow: hidden;
 }
-
-.title-bar {
-  height: 40px;
-  width: 100vw;
-  position: absolute;
-  top: 0;
-  right: 0;
-  -webkit-app-region: drag;
-}

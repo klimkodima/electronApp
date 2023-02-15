@@ -10,8 +10,22 @@ import {
 } from 'electron';
 import { autoUpdater } from 'electron-updater';
 import log from 'electron-log';
+import colors from 'colors';
 import MenuBuilder from './menu';
 import { resolveHtmlPath } from './util';
+
+colors.setTheme({
+  silly: 'rainbow',
+  input: 'grey',
+  verbose: 'cyan',
+  prompt: 'grey',
+  info: 'green',
+  data: 'grey',
+  help: 'cyan',
+  warn: 'yellow',
+  debug: 'blue',
+  error: 'red',
+});
 
 class AppUpdater {
   constructor() {
@@ -79,7 +93,7 @@ const createWindow = async () => {
     minHeight: 750,
     maxWidth: width,
     maxHeight: height,
-    titleBarStyle: 'default',
+    titleBarStyle: 'hidden',
     titleBarOverlay: false,
     backgroundColor: 'fff',
     icon: getAssetPath('icon.png'),
@@ -150,6 +164,7 @@ app.on('window-all-closed', () => {
 
 app
   .whenReady()
+  // eslint-disable-next-line promise/always-return
   .then(() => {
     createWindow();
     app.on('activate', () => {
